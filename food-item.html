@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="./styles/home.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <title>Home Gourmet</title>
+</head>
+
+<body>
+    <div data-role="page" id="FoodItem">
+        <div id="hg-header" data-role="header" data-position="fixed">
+
+            <div class="hg-logo-div">
+                <a id="hg-icon-btn-back" href="#Menu" data-transition="slide" class="ui-btn" data-direction="reverse"><i
+                        data-feather="chevron-left"></i></a>
+                <a class="hg-button" id="logo-btn" href="home.html" target="_self" class="ui-btn"><img src="./images/Logo.png" height="62.56px"></a>
+            </div>
+            <div class="hg-header-icon-div">
+                <a href="#Page2" class="ui-btn" id="hg-icon-btn"><i data-feather="user"></i></a>
+                <a href="#Page2" class="ui-btn" id="hg-icon-btn"><i data-feather="shopping-cart"></i></a>
+                <a href="#Menu" data-transition="slide" class="ui-btn" id="hg-icon-btn-right"><i
+                        data-feather="menu"></i></a>
+            </div>
+
+        </div>
+        <div class="hg-order-banner">
+            <img class="hg-food-item-img" src="./images/hg-food-item.png">
+        </div>
+        <div role="main" id="hg-main">
+            <div class="heading-row" style="margin-bottom: 50px;">
+                <h2 class="hg-main-food-item-heading inline" id="food-item-heading">Crispy chicken burger</h2>
+                <div>
+                    <div class="hg-food-item-text">A crispy fried chicken fillet topped with Cheddar cheese, finished off with a soft Broiche bun.</div>
+                    <h2 class="hg-food-item-heading2 inline">LKR 600.00</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="hg-view-order-main-text inline">Size</div>
+                <div style="margin-left: 10px; margin-top: 0; padding-top: 0; margin-bottom: 20px; ">
+                    <form>
+                        <fieldset data-role="controlgroup">
+                            <div style="display: flex;flex-direction: row; justify-content: left; height: 40px;">
+                                <div style="width: 100px; margin-right: 10px; ">
+                                    <input type="radio" name="radio-choice" id="radio-choice-a" value="on" checked="checked">
+                                    <label for="radio-choice-a" style="font-family: 'Roboto', sans-serif; font-weight: bolder; color: #2A2B2E; font-size: small;">Small</label>
+                                </div>
+                                <div style="width: 100px; margin-right: 10px; ">
+                                    <input type="radio" name="radio-choice" id="radio-choice-b" value="off">
+                                    <label for="radio-choice-b" style="font-family: 'Roboto', sans-serif; font-weight: bolder; color: #2A2B2E; font-size: small;">Medium </br> <p style="font-size: x-small; margin: 0; padding: 0;">+LKR 200</p></label>
+                                </div>
+                                <div style="width: 100px; ">
+                                    <input type="radio" name="radio-choice" id="radio-choice-c" value="off">
+                                    <label for="radio-choice-c" style="font-family: 'Roboto', sans-serif; font-weight: bolder; color: #2A2B2E; font-size: small;">Large  </br> <p style="font-size: x-small; margin: 0; padding: 0;">+LKR 4d00</p></label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="hg-view-order-main-text Qty inline">Quantity</div>
+                <div class="hg-view-order-amount right">
+                    <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                        <i style="padding-left: 20px; padding-right: 20px; color: #2A2B2E;" data-feather="minus-circle"></i>
+                        <p class="qty-num" style="font-family: 'Roboto', sans-serif; font-weight: bolder; color: #2A2B2E;">1</p>
+                        <i style="padding-left: 20px; color: #2A2B2E;" data-feather="plus-circle"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="hg-view-order-main-text inline">Special instructions</div>
+                <div class="hg-food-item-note-div">
+                    <textarea cols="40" rows="8" name="textarea" id="hg-food-item-note" value="" placeholder="Add a note"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="hg-view-order-main-text inline" style="margin-bottom: 10px;">Frequently bought together</div>
+                <div style="margin-left: 10px;">
+                    <div style="display: flex; margin-bottom: 10px;">
+                        <div style="float: left; width: 50%;">
+                            <div style="display: flex;">
+                                <div style="background-color:#E9F3FF; width:60px; height: 60px; border-radius: 5px; float: left;">
+                                    <img style="width: 60px; height:60px" src="./images/hg-food-item-1.png">
+                                </div>
+                                <div style="float: right; padding-left: 20px;">
+                                    <p style=" font-family: 'Poppins', sans-serif;font-weight: 400; font-size: small; margin-top: 5px; margin-bottom: 10px;">French fries</p>
+                                    <p style=" font-family: 'Poppins', sans-serif;font-weight: 400; font-size: small; margin-top: 0; color: #00567B;">LKR 300.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="float: right; width: 50%;">
+                            <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                                <i style="padding-left: 20px; padding-right: 20px; color: #2A2B2E;" data-feather="minus-circle"></i>
+                                <p style="font-family: 'Roboto', sans-serif; font-weight: bolder; color: #2A2B2E;">0</p>
+                                <i style="padding-left: 20px; color: #2A2B2E;" data-feather="plus-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex;">
+                        <div style="float: left; width: 50%;">
+                            <div style="display: flex;">
+                                <div style="background-color:#E9F3FF; width:60px; height: 60px; border-radius: 5px; float: left;">
+                                    <img style="width: 60px; height:60px" src="./images/hg-food-item-2.png">
+                                </div>
+                                <div style="float: right; padding-left: 20px;">
+                                    <p style=" font-family: 'Poppins', sans-serif;font-weight: 400; font-size: small; margin-top: 5px; margin-bottom: 10px;">Choco shake</p>
+                                    <p style=" font-family: 'Poppins', sans-serif;font-weight: 400; font-size: small; margin-top: 0; color: #00567B;">LKR 350.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="float: right; width: 50%;">
+                            <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                                <i style="padding-left: 20px; padding-right: 20px; color: #2A2B2E;" data-feather="minus-circle"></i>
+                                <p style="font-family: 'Roboto', sans-serif; font-weight: bolder; color: #2A2B2E;">0</p>
+                                <i style="padding-left: 20px; color: #2A2B2E;" data-feather="plus-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row-total">
+                <div style="display:flex;">
+                    <div style="float: left; width: 50%;">
+                        <p style=" font-family: 'Poppins', sans-serif;font-weight: 400; font-size: small; margin-top: 0; margin-bottom: 10px;">Total Cost</p>
+                        <p class="total-cost" style=" font-family: 'Poppins', sans-serif;font-weight: 600; font-size: medium; margin-top: 0; color: #00567B;">LKR 600.00</p>
+                    </div>
+                    <div style="float: right; width: 50%;">
+                        <a id="hg-order-btn" class="ui-btn" href="shopping-cart.html" target="_self">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div id="hg-footer" data-role="footer">
+
+            <div class="container">
+                <div class="nav-wrapper">
+                    <nav class="nav">
+                        <ul class="nav-list ul-reset">
+                            <li class="nav-item">
+                                <div class="nav-item-inner">
+                                    <a href="#" class="nav-item-inner-heading plus">
+                                        <p id="hg-footer-heading">About</p>
+                                    </a>
+                                    </a>
+                                    <ul class="nav-sub-list ul-reset">
+                                        <div class="nav-sub-list-inner">
+                                            <li class="nav-sub-item">
+                                                <p>Founded in 2020, Home Gourmet is the most widely used home-cooked food delivery app in Sri Lanka today. <u>Read more</u></p>
+                                            </li>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="nav-item-inner">
+                                    <a href="#" class="nav-item-inner-heading plus">
+                                        <p id="hg-footer-heading">Contact</p>
+                                    </a>
+                                    <ul class="nav-sub-list ul-reset">
+                                        <div class="nav-sub-list-inner">
+                                            <li class="nav-sub-item">
+                                                <p>Email : homegourmet@gmail.com</p>
+                                                <p>Mobile : (+94) 77 899 3645</p>
+                                            </li>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="nav-item-inner">
+                                    <a href="#" class="nav-item-inner-heading plus">
+                                        <p id="hg-footer-heading">Follow Us</p>
+                                    </a>
+                                    <ul class="nav-sub-list ul-reset">
+                                        <div class="nav-sub-list-inner">
+                                            <li class="nav-sub-item">
+                                                <p>Instagram </p>
+                                                <p>Facebook </p>
+                                                <p>Pinterest </p>
+                                            </li>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+
+            <div id="hg-footer-links-div">
+                <a id="hg-footer-links">Terms and Conditions</a> . <a id="hg-footer-links">Privacy Statement</a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- First menu-->
+    <div data-role="page" id="Menu">
+
+        <div data-role="header" id="hg-header">
+            <div class="hg-menu-logo-div">
+                <a class="hg-button" id="logo-btn" href="home.html" target="_self" class="ui-btn"><img src="./images/Logo.png" height="62.56px"></a>
+                <a id="hg-icon-btn-right-close" href="#Home" data-transition="slide" class="ui-btn" data-direction="reverse"><i data-feather="x"></i></a>
+
+            </div>
+
+        </div>
+
+        <div role="main" class="ui-content" id="hg-menu" data-transition="slide">
+
+            <div data-role="controlgroup" data-type="vertical">
+                <a href="#Menu2" data-transition="slide" class="ui-btn" id="hg-menu-btn">Categories
+                    <i id="hg-icon-chevron" data-feather="chevron-right"></i></a>
+                <a href="orders.html" class="ui-btn" id="hg-menu-btn">Promotions</a>
+                <a href="orders.html" class="ui-btn" id="hg-menu-btn">Rewards Center</a>
+                <a href="./orders.html" target="_self" class="ui-btn" id="hg-menu-btn">Orders</a>
+                <a href="orders.html" class="ui-btn" id="hg-menu-btn">Favorites</a>
+                <a href="./qr-scanner.html" target="_self" class="ui-btn" id="hg-menu-btn">QR Scanner</a>
+                <a href="orders.html" class="ui-btn" id="hg-menu-btn">About Us</a>
+                <a href="orders.html" class="ui-btn" id="hg-menu-btn">Sign In</a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Second menu-->
+
+    <div data-role="page" id="Menu2">
+
+        <div data-role="header" id="hg-header">
+            <div id="hg-menu2-heading-div">
+                <h2 id="hg-menu2-heading">Categories</h2>
+                <a id="hg-icon-btn-right-close-menu2" href="#Menu" data-transition="slide" class="ui-btn" data-direction="reverse"><i data-feather="chevron-left"></i></a>
+
+            </div>
+
+        </div>
+
+        <div role="main" class="ui-content" id="hg-menu" data-transition="slide">
+
+            <div data-role="controlgroup" data-type="vertical">
+                <a href="orders.html" class="ui-btn" id="hg-menu-btn">Chinese</a>
+                <a href="orders.html" class="ui-btn" id="hg-menu-btn">Bakery</a>
+                <a href="orders.html" class="ui-btn" id="hg-menu-btn">Italian</a>
+                <a href="orders.html" class="ui-btn" id="hg-menu-btn">Burgers</a>
+                <a href="orders.html" class="ui-btn" id="hg-menu-btn">Desserts</a>
+                <a href="orders.html" class="ui-btn" id="hg-menu-btn">Drinks</a>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+</body>
+
+<script>
+    feather.replace()
+
+    function accordion(section, heading, list) {
+        $(section).each(function() {
+            var act = 'active',
+                actClass = '.active',
+                that = $(this);
+
+            function tglH() {
+                that.find(list).slideToggle(250);
+            }
+
+            function open(click) {
+                $(click).toggleClass('plus minus');
+                tglH();
+                that.find(list).addClass(act);
+            }
+
+            function close(click) {
+                $(click).toggleClass('minus plus');
+                tglH();
+                that.find(list).removeClass(act);
+            }
+
+            if (that.find(list).length == 0) {
+                $(this).find(heading).removeClass('plus').addClass('no-sub');
+            } else {
+                $(this).find(heading).click(function(e) {
+                    e.preventDefault();
+                });
+            }
+
+            $(this).find(heading).click(function() {
+                if ($(this).hasClass('minus')) {
+                    // close this menu
+                    close(this);
+                    that.find(list).removeClass(act);
+                } else if ($(this).hasClass('plus')) {
+                    if ($(heading).hasClass('minus')) {
+                        $(heading).each(function() {
+                            if (!$(this).hasClass('no-sub')) {
+                                $(this).removeClass('minus').addClass('plus');
+                            }
+                        })
+                        $(section).each(function() {
+                            if ($(this).find(list).hasClass(act)) {
+                                $(actClass).slideToggle(250);
+                                $(this).find(list).removeClass(act);
+                            }
+                        });
+                        // open this menu
+                        open(this);
+                    } else if ($(this).hasClass('plus')) {
+                        // open this menu
+                        open(this);
+                    }
+                }
+            })
+        })
+    }
+    accordion('.nav-item', '.nav-item-inner-heading', '.nav-sub-list');
+</script>
+<script src="JS/cart.js"></script>
+
+</html>

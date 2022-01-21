@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="./styles/bakery/home.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pouchdb/7.2.2/pouchdb.min.js" integrity="sha512-2Uc5uGzoGNFBmgURVIs1QZagEEt0rgJrSEcAXwP6c5EA6xGEyTQ1iViZO+CAR804xTHiAMIKFq+rxlJpurDZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Home Gourmet</title>
+</head>
+
+<body>
+    <div data-role="page" id="Home">
+        <div id="hg-header" data-role="header" data-position="fixed">
+            <div class="hg-logo-div">
+                <a id="hg-icon-btn-back" href="./bakery.html" target="_self" data-transition="slide" data-direction="reverse"><i data-feather="chevron-left"></i></a>
+                <a class="hg-button" id="logo-btn" href="home.html" target="_self" class="ui-btn"><img src="./images/Logo.png" height="62.56px"></a>
+            </div>
+            <div class="hg-header-icon-div">
+                <a href="#Page2" class="ui-btn" id="hg-icon-btn"><i data-feather="user"></i></a>
+                <a href="shopping-cart.html" target="_self" class="ui-btn" id="hg-icon-btn"><i data-feather="shopping-cart"></i></a>
+                <a href="#Menu" data-transition="slide" class="ui-btn" id="hg-icon-btn-right"><i
+                        data-feather="menu"></i></a>
+            </div>
+        </div>
+        <img class="hg-order-banner" src="./images/hg-banner-1.jpg">
+
+        <div role="main" id="hg-main">
+            <div class="hg-info-link">
+                <h2 class="hg-main-heading">Tasty Bakers</h2>
+                <div class="hg-icon-btn-next"><i id="hg-icon-next" data-feather="chevron-right"></i></div>
+                <div class="card-info-description">
+                    <div class="meta rating">
+                        <i data-feather="star"></i>
+                        <span>4.0</span>
+                    </div>
+                    <div class="meta duration">
+                        <i data-feather="clock"></i>
+                        <span>10 - 15 mins</span>
+                    </div>
+                </div>
+                <div class="hg-main-sub-text-info">Tap for more restaurant information and reviews</div>
+            </div>
+            <div class="hg-search-div">
+                <input type="search" name="search" id="hg-home-search" value="" placeholder="Search for a product">
+            </div>
+            <div id="hg-bakery-categories" class="hg-categories-display">
+                <div class="hg-category" id="cakes-link" onclick="redirectToCakes()">Cakes</div>
+                <div class="hg-category" id="cookies-link" onclick="redirectToCookies()">Cookies</div>
+                <div class="hg-category" id="pastries-link" onclick="redirectToPastries()">Pastries</div>
+                <div class="hg-category" id="muffins-link" onclick="redirectToMuffins()">Muffins</div>
+            </div>
+            <div id="cakes">
+                <h2 class="hg-secondary-heading" id="cakes">Cakes</h2>
+
+                <a href="food-item.html" target="_self">
+                    <div class="hg-item-card">
+                        <div class="hg-item-image-container">
+                            <img class="hg-item-image" src="./images/hg-bakery-item-7.png">
+                        </div>
+                        <div class="item-text-container">
+                            <div class="hg-item-name">
+                                Chocolate Cake Slice
+                            </div>
+                            <div class="hg-item-description">
+                                Dark chocolate fudge cake
+                            </div>
+                        </div>
+                        <div class="hg-item-price">
+                            LKR 200.00
+                        </div>
+                       
+                    </div>
+                </a>
+
+                <a href="food-item.html" target="_self">
+                    <div class="hg-item-card">
+                        <div class="hg-item-image-container">
+                            <img src="./images/hg-bakery-item-8.png" class="hg-item-image" style="transform: scaleX(-1);">
+                        </div>
+                     
+                        <div class="item-text-container">
+                            <div class="hg-item-name">
+                                Red Velvet Cake Slice
+                            </div>
+                            <div class="hg-item-description">
+                                Sultry and sweet red velvet cake
+                            </div>
+                        </div>
+                        <div class="hg-item-price">
+                            LKR 150.00
+                        </div>
+                    </div>
+                </a>
+
+                <a href="food-item.html" target="_self">
+                    <div class="hg-item-card">
+                        <div class="hg-item-image-container">
+                            <img src="./images/hg-bakery-item-9.png" class="hg-item-image">
+                        </div>
+                      
+                        <div class="item-text-container">
+                            <div class="hg-item-name">
+                                Lemon Cake Slice
+                            </div>
+                            <div class="hg-item-description">
+                                French style, perfect lemon pillow.
+                            </div>
+                        </div>
+                        <div class="hg-item-price">
+                            LKR 450.00
+                        </div>
+                    </div>
+                </a>
+
+                <a href="food-item.html" target="_self">
+                    <h2 class="hg-secondary-heading" id="cookies">Cookies</h2>
+                    <div class="hg-item-card">
+                        <div class="hg-item-image-container">
+                            <img src="./images/hg-bakery-item-4.png" class="hg-item-image">
+                        </div>
+                       
+                        <div class="item-text-container">
+                            <div class="hg-item-name">
+                                Chocolate chip cookies
+                            </div>
+                            <div class="hg-item-description">
+                                Regular 6-pack cookie gift box
+                            </div>
+                        </div>
+                        <div class="hg-item-price">
+                            LKR 200.00
+                        </div>
+                    </div>
+                </a>
+
+                <a href="food-item.html" target="_self">
+                    <h2 class="hg-secondary-heading" id="pastries">Pastries</h2>
+                    <div class="hg-item-card">
+                        <div class="hg-item-image-container">
+                            <img src="./images/hg-bakery-item-5.png" class="hg-item-image">
+                        </div>
+                      
+                        <div class="item-text-container">
+                            <div class="hg-item-name">
+                                Vanilla croissants
+                            </div>
+                            <div class="hg-item-description">
+                                Triple vanilla burst croissants
+                            </div>
+                        </div>
+                        <div class="hg-item-price">
+                            LKR 350.00
+                        </div>
+                    </div>
+                </a>
+
+                <h2 class="hg-secondary-heading" id="muffins">Muffins</h2>
+                <a href="food-item.html" target="_self">
+                    <div class="hg-item-card">
+
+                        <div class="hg-item-image-container">
+                            <img src="./images/hg-bakery-item-6.png" class="hg-item-image">
+                        </div>
+                      
+                        <div class="item-text-container">
+                            <div class="hg-item-name">
+                                Chocolate muffins
+                            </div>
+                            <div class="hg-item-description">
+                                Classic nutella muffin
+                            </div>
+                        </div>
+                        <div class="hg-item-price">
+                            LKR 70.00
+                        </div>
+                    </div>
+                </a>
+
+
+            </div>
+
+            <!--Footer-->
+            <div id="hg-footer" data-role="footer">
+
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <nav class="nav">
+                            <ul class="nav-list ul-reset">
+                                <li class="nav-item">
+                                    <div class="nav-item-inner">
+                                        <a href="#" class="nav-item-inner-heading plus">
+                                            <p id="hg-footer-heading">About</p>
+                                        </a>
+                                        </a>
+                                        <ul class="nav-sub-list ul-reset">
+                                            <div class="nav-sub-list-inner">
+                                                <li class="nav-sub-item">
+                                                    <p>Founded in 2020, Home Gourmet is the most widely used home-cooked food delivery app in Sri Lanka today. <u>Read more</u></p>
+                                                </li>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="nav-item-inner">
+                                        <a href="#" class="nav-item-inner-heading plus">
+                                            <p id="hg-footer-heading">Contact</p>
+                                        </a>
+                                        <ul class="nav-sub-list ul-reset">
+                                            <div class="nav-sub-list-inner">
+                                                <li class="nav-sub-item">
+                                                    <p>Email : homegourmet@gmail.com</p>
+                                                    <p>Mobile : (+94) 77 899 3645</p>
+                                                </li>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="nav-item-inner">
+                                        <a href="#" class="nav-item-inner-heading plus">
+                                            <p id="hg-footer-heading">Follow Us</p>
+                                        </a>
+                                        <ul class="nav-sub-list ul-reset">
+                                            <div class="nav-sub-list-inner">
+                                                <li class="nav-sub-item">
+                                                    <p>Instagram </p>
+                                                    <p>Facebook </p>
+                                                    <p>Pinterest </p>
+                                                </li>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+
+                <div id="hg-footer-links-div">
+                    <a id="hg-footer-links">Terms and Conditions</a> . <a id="hg-footer-links">Privacy Statement</a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- First menu-->
+        <div data-role="page" id="Menu">
+
+            <div data-role="header" id="hg-header">
+                <div class="hg-menu-logo-div">
+                    <a class="hg-button" id="logo-btn" href="home.html" target="_self" class="ui-btn"><img src="./images/Logo.png" height="62.56px"></a>
+                    <a id="hg-icon-btn-right-close" href="#Home" data-transition="slide" class="ui-btn" data-direction="reverse"><i data-feather="x"></i></a>
+
+                </div>
+
+            </div>
+
+            <div role="main" class="ui-content" id="hg-menu" data-transition="slide">
+
+                <div data-role="controlgroup" data-type="vertical">
+                    <a href="#Menu2" data-transition="slide" id="hg-menu-btn">Categories
+                    <i id="hg-icon-chevron" data-feather="chevron-right"></i></a>
+                    <a href="#" id="hg-menu-btn">Promotions</a>
+                    <a href="#" id="hg-menu-btn">Rewards Center</a>
+                    <a href="./orders.html" target="_self" id="hg-menu-btn">Orders</a>
+                    <a href="#" id="hg-menu-btn">Favorites</a>
+                    <a href="./qr-scanner.html" target="_self" id="hg-menu-btn">QR Scanner</a>
+                    <a href="#" id="hg-menu-btn">About Us</a>
+                    <a href="#" id="hg-menu-btn">Sign In</a>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Second menu-->
+
+        <div data-role="page" id="Menu2">
+
+            <div data-role="header" id="hg-header">
+                <div id="hg-menu2-heading-div">
+                    <h2 id="hg-menu2-heading">Categories</h2>
+                    <a id="hg-icon-btn-right-close-menu2" href="#Menu" data-transition="slide" class="ui-btn" data-direction="reverse"><i data-feather="chevron-left"></i></a>
+
+                </div>
+
+            </div>
+
+            <div role="main" class="ui-content" id="hg-menu" data-transition="slide">
+
+                <div data-role="controlgroup" data-type="vertical">
+                    <a href="#" id="hg-menu-btn">Chinese</a>
+                    <a href="bakery.html" target="_self" id="hg-menu-btn">Bakery</a>
+                    <a href="#" id="hg-menu-btn">Italian</a>
+                    <a href="#" id="hg-menu-btn">Burgers</a>
+                    <a href="#" id="hg-menu-btn">Desserts</a>
+                    <a href="#" id="hg-menu-btn">Drinks</a>
+                </div>
+            </div>
+
+
+        </div>
+
+
+</body>
+
+<script>
+    feather.replace()
+
+    function accordion(section, heading, list) {
+        $(section).each(function() {
+            var act = 'active',
+                actClass = '.active',
+                that = $(this);
+
+            function tglH() {
+                that.find(list).slideToggle(250);
+            }
+
+            function open(click) {
+                $(click).toggleClass('plus minus');
+                tglH();
+                that.find(list).addClass(act);
+            }
+
+            function close(click) {
+                $(click).toggleClass('minus plus');
+                tglH();
+                that.find(list).removeClass(act);
+            }
+
+            if (that.find(list).length == 0) {
+                $(this).find(heading).removeClass('plus').addClass('no-sub');
+            } else {
+                $(this).find(heading).click(function(e) {
+                    e.preventDefault();
+                });
+            }
+
+            $(this).find(heading).click(function() {
+                if ($(this).hasClass('minus')) {
+                    // close this menu
+                    close(this);
+                    that.find(list).removeClass(act);
+                } else if ($(this).hasClass('plus')) {
+                    if ($(heading).hasClass('minus')) {
+                        $(heading).each(function() {
+                            if (!$(this).hasClass('no-sub')) {
+                                $(this).removeClass('minus').addClass('plus');
+                            }
+                        })
+                        $(section).each(function() {
+                            if ($(this).find(list).hasClass(act)) {
+                                $(actClass).slideToggle(250);
+                                $(this).find(list).removeClass(act);
+                            }
+                        });
+                        // open this menu
+                        open(this);
+                    } else if ($(this).hasClass('plus')) {
+                        // open this menu
+                        open(this);
+                    }
+                }
+            })
+        })
+    }
+    accordion('.nav-item', '.nav-item-inner-heading', '.nav-sub-list');
+
+
+    for (let i = 0; i < document.querySelectorAll('.hg-item-card').length; i++) {
+
+        document.querySelectorAll('.hg-item-card')[i].addEventListener("click", function() {
+
+            localStorage.setItem('item_img', document.querySelectorAll(".hg-item-image")[i].getAttribute('src'));
+            localStorage.setItem('item_name', document.querySelectorAll(".hg-item-name")[i].textContent);
+            localStorage.setItem('item_description', document.querySelectorAll(".hg-item-description")[i].textContent);
+            localStorage.setItem('item_price', document.querySelectorAll(".hg-item-price")[i].textContent);
+
+        })
+
+    }
+
+    function redirectToCakes() {
+        refreshTabs();
+        window.location.href = "#cakes";
+        var element = document.getElementById("cakes-link");
+        element.classList.add("highlight");
+    }
+
+    function redirectToCookies() {
+        refreshTabs();
+        window.location.href = "#cookies";
+        var element = document.getElementById("cookies-link");
+        element.classList.add("highlight");
+    }
+
+    function redirectToPastries() {
+        refreshTabs();
+        window.location.href = "#pastries";
+        var element = document.getElementById("pastries-link");
+        element.classList.add("highlight");
+    }
+
+    function redirectToMuffins() {
+        refreshTabs();
+        window.location.href = "#muffins";
+        var element = document.getElementById("muffins-link");
+        element.classList.add("highlight");
+    }
+
+    function refreshTabs() {
+        document.getElementById("cakes-link").classList.remove("highlight");
+        document.getElementById("cookies-link").classList.remove("highlight");
+        document.getElementById("pastries-link").classList.remove("highlight");
+        document.getElementById("muffins-link").classList.remove("highlight");
+    }
+
+    $(".hg-item-card").click(function() {
+
+    })
+</script>
+
+<script src="JS/cart.js"></script>
+
+</html>
